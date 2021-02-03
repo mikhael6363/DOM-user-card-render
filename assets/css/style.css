@@ -1,0 +1,126 @@
+@import './reset.css';
+
+:root {
+  --card-min-width: 300px;
+  --card-max-width: 320px;
+  --radius-top: 9px 9px 0 0;
+  --radius-bottom: 0 0 9px 9px;
+  --border-color: rgba(0, 0, 0, 0.18);
+  --initials-color: #ffffff;
+  --description-color: #6c7279;
+  --box-shadow: 0px 7px 15px -6px rgba(0, 0, 0, 0.7);
+  --social-icon-color: #c6cacc;
+  --social-icon-hover-bg: #e84545;
+  font-family: Verdana, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+#user-cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2em;
+}
+.user-card {
+  width: 100%;
+  min-width: var(--card-min-width);
+  max-width: var(--card-max-width);
+  margin: 1.5em;
+  background: #ffffff;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+}
+.user-card:active {
+  border: 5 px solid red;
+}
+.img-wrapper {
+  width: 100%;
+  height: var(--card-max-width);
+  position: relative;
+}
+.initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--initials-color);
+  font-size: 2.3rem;
+}
+.user-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.img-wrapper,
+.user-img {
+  border-radius: var(--radius-top);
+}
+.content-wrapper {
+  padding: 20px;
+  border-radius: var(--radius-bottom);
+}
+.user-name {
+  width: 100%;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.initials:empty::after,
+.user-name:empty::after {
+  content: 'Unknown';
+}
+.user-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--description-color);
+}
+.social-links-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 7px 0;
+}
+.social-link {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  color: var(--social-icon-color);
+  border: 1px solid #e8ecee;
+  border-radius: 3px;
+  transition-property: background, color;
+  transition: 0.3s ease-in-out;
+}
+.social-link:hover {
+  border-color: transparent;
+  background: var(--social-icon-hover-bg);
+  color: #ffffff;
+}
+/* selected card styles */
+.selected-card {
+  box-shadow: 0px 0px 0px 3px #ff0000;
+  transform: scale(1.01);
+}

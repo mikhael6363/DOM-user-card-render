@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM. User Card Render</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/0cdc3b073f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./assets/js/data/data.js"></script>
+    <script defer src="./assets/js/data/constants.js"></script>
+    <script defer src="./assets/js/utils/string-to-color.js"></script>
+    <script defer src="./assets/js/handlers/imageLoadError.js"></script>
+    <script defer src="./assets/js/handlers/getFullNameIntitials.js"></script>
+    <script defer src="./assets/js/handlers/cardSelection.js"></script>
+    <script defer src="./assets/js/handlers/createImage.js"></script>
+    <script defer src="./assets/js/handlers/createImageWrapper.js"></script>
+    <script defer src="./assets/js/handlers/createMainElements.js"></script>
+    <script defer src="./assets/js/handlers/createSocialLinks.js"></script>
+    <script defer src="./assets/js/index.js"></script>
+  </head>
+  <body>
+    <section id="user-cards-container">
+      <article class="user-card">
+        <div class="img-wrapper">
+          <div class="initials">DJ</div>
+          <img
+            class="user-img"
+            src="https://images.wsj.net/im-105323?width=620&size=custom_3524x3600"
+            alt="Jason Statham"
+          />
+        </div>
+        <div class="content-wrapper">
+          <h3 class="user-name">
+            Example Example Example Example Example Example Example Example
+            Example Example
+          </h3>
+          <p class="user-description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
+            voluptatum omnis similique? Fugiat, ipsam nisi. Delectus consequatur
+            quis perspiciatis in error ducimus libero, iste inventore iusto
+            natus, aspernatur quibusdam praesentium? Distinctio ratione dolorem
+            assumenda tempora libero odit molestiae deserunt illo voluptatem
+            eius autem explicabo eligendi totam harum culpa, cum necessitatibus.
+          </p>
+          <div class="social-links-wrapper">
+            <a
+              href="https://www.facebook.com/DwayneJohnson"
+              class="social-link facebook"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/therock/?hl=ru"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/therock/?hl=ru"
+              class="social-link instagram"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
