@@ -1,8 +1,12 @@
 'use strict';
 
 const cardsContainer = document.getElementById('user-cards-container');
-const userCards = responseData.map((user) => createUserCards(user));
-cardsContainer.append(...userCards);
+const data1 = fetch('./assets/js/data/users.json')
+  .then((response) => response.json())
+  .then((data) => {
+    cardsContainer.append(...data.map((user) => createUserCards(user)));
+  })
+  .catch(() => new Error('Data is not received!'));
 
 function createUserCards(user) {
   return createElement(
