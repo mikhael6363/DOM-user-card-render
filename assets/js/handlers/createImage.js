@@ -1,9 +1,10 @@
-function createImage({ name, profilePicture, id }, { className }) {
-  const img = document.createElement('img');
-  img.classList.add(className);
+function createImage(user, ...imgClassName) {
+  const { id, profilePicture } = user;
+  const img = createElement('img', {
+    classNames: imgClassName,
+    attributes: { src: profilePicture, alt: getFullName(user) },
+  });
   img.dataset.id = id;
-  img.setAttribute('alt', name);
-  img.setAttribute('src', profilePicture);
   img.addEventListener('error', handleImageError);
   img.addEventListener('load', handleImageLoad);
   return img;

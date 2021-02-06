@@ -10,7 +10,7 @@
  */
 function createElement(
   type,
-  { classNames = [], onClick, attributes = {} } = {},
+  { classNames = [], onClick = null, attributes = {} } = {},
   ...children
 ) {
   const element = document.createElement(type);
